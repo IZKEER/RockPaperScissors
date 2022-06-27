@@ -12,22 +12,28 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'Scissors') {
         playerScore++;
         return `You WIN! Rock beats Scissors. Score ${playerScore} to ${computerScore}`;
-    } else if (playerSelection == 'rock' && computerSelection == 'Paper') {
+    }
+    if (playerSelection == 'rock' && computerSelection == 'Paper') {
         computerScore++;
-        return `You lose! Paper co Rock! Score: ${playerScore} to ${computerScore}`;
-    } else if (playerSelection == 'paper' && computerSelection == 'Scissors') {
+        return `You Lose! Paper covers Rock! Score: ${playerScore} to ${computerScore}`;
+    }
+    if (playerSelection == 'paper' && computerSelection == 'Scissors') {
         computerScore++;
-        return `You Lose! Scissors cut paper. Score ${playerScore} to ${computerScore}`;
-    } else if (playerSelection == 'paper' && computerSelection == 'Rock') {
+        return `You Lose! Scissors cuts Paper. Score ${playerScore} to ${computerScore}`;
+    }
+    if (playerSelection == 'paper' && computerSelection == 'Rock') {
         playerScore++;
-        return `You Win! paper covers rock! Score: ${playerScore} to ${computerScore}`;
-    } else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
+        return `You Win! Paper covers Rock! Score: ${playerScore} to ${computerScore}`;
+    }
+    if (playerSelection == 'scissors' && computerSelection == 'Rock') {
         computerScore++;
-        return `You lose! rock beats Scissors!. Score ${playerScore} to ${computerScore}`;
-    } else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
+        return `You Lose! Rock beats Scissors!. Score ${playerScore} to ${computerScore}`;
+    }
+    if (playerSelection == 'scissors' && computerSelection == 'Paper') {
         playerScore++;
-        return `You Win! Scissors beat paper. Score: ${playerScore} to ${computerScore}`;
-    } else return `Its a Draw! Try again!! Score: ${playerScore} to ${computerScore}`;
+        return `You Win! Scissors beats Paper. Score: ${playerScore} to ${computerScore}`;
+    }
+    return `Its a Draw! Try again!! Score: ${playerScore} to ${computerScore}`;
 }
 
 function game() {
