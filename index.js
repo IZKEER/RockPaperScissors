@@ -1,12 +1,8 @@
 function computerPlay() {
-    const number = Math.random() * 3;
-    if (number <= 1) {
-        return 'Rock';
-    } else if (number >= 2) {
-        return 'Scissors';
-    } else {
-        return 'Paper';
-    }
+    const number = Math.floor(Math.random() * 3);
+    if (number == 0) return 'Rock';
+    if (number == 1) return 'Scissors';
+    if (number == 2) return 'Paper';
 }
 
 let computerScore = 0;
@@ -31,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
         playerScore++;
         return `You Win! Scissors beat paper. Score: ${playerScore} to ${computerScore}`;
-    } else return `Its a Draw!! Try again!! Score: ${playerScore} to ${computerScore}`;
+    } else return `Its a Draw! Try again!! Score: ${playerScore} to ${computerScore}`;
 }
 
 function game() {
